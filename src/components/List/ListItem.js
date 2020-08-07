@@ -7,7 +7,7 @@ export default function ListItem({ article }) {
   return (
     <li>
       <a href={article.webUrl}><h3>{article.webTitle}</h3></a>
-      <img src={article.fields?.thumbnail} />
+      <img src={article.fields?.thumbnail} alt="Article Thumbnail"/>
     </li>
   );
 }
