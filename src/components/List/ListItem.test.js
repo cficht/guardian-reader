@@ -1,11 +1,11 @@
 /* eslint-disable no-undef */
 import React from 'react';
 import renderer from 'react-test-renderer';
-import App from './App';
+import ListItem from './ListItem';
 
-test('renders App.js correctly', () => {
+test('renders ListItem.js correctly', () => {
   const tree = renderer
-    .create(<App />)
+    .create(<ListItem />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

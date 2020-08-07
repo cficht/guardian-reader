@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { getArticles } from './guardian-api';
 
 describe('getArticles service', () => {

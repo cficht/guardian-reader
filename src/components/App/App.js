@@ -1,18 +1,11 @@
 import React from 'react';
-import { getArticles } from '../../services/guardian-api'
+import List from '../List/List';
 import './App.css';
 
 function App() {
-  const articles = () => {
-    getArticles()
-    .then(res => console.log(res))
-  }
-
-  articles();
-
   return (
     <div className="App">
-      Guardian Reader
+      <List />
     </div>
   );
 }

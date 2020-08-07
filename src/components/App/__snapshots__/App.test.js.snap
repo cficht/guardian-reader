@@ -4,6 +4,8 @@ exports[`renders App.js correctly 1`] = `
 <div
   className="App"
 >
-  Guardian Reader
+  <main>
+    <ul />
+  </main>
 </div>
 `;
