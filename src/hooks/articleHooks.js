@@ -3,13 +3,23 @@ import { getArticles } from '../services/guardian-api';
 
 export const useArticles = () => {
   const [articles, setArticles] = useState([]);
+  const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
     getArticles()
       .then(articles => setArticles(articles));
   }, []);
 
+  const handleSearchText = ({ target }) => setSearchText(target.value);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+  };
+
   return {
-    articles
+    articles,
+    searchText,
+    handleSearchText,
+    handleSearch
   };
 };

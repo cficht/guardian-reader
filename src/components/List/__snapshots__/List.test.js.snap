@@ -2,6 +2,24 @@
 
 exports[`renders List.js correctly 1`] = `
 <main>
-  <ul />
+  <article>
+    <section>
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+        <button>
+          Search
+        </button>
+      </form>
+    </section>
+  </article>
+  <article>
+    <ul />
+  </article>
 </main>
 `;

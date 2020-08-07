@@ -1,6 +1,7 @@
 import React from 'react';
 import { useArticles } from '../../hooks/articleHooks';
 import ListItem from './ListItem';
+import Search from '../Search/Search';
 
 export default function List() {
   const { articles } = useArticles();
@@ -9,9 +10,14 @@ export default function List() {
 
   return (
     <main>
-      <ul>
-        {articleNodes}
-      </ul>
+      <article>
+        <Search />
+      </article>
+      <article>
+        <ul>
+          {articleNodes}
+        </ul>
+      </article>
     </main>
   );
 }
