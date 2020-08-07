@@ -5,15 +5,13 @@ describe('getArticles service', () => {
   it('uses fetch to get Articles', () => {
     global.fetch = jest.fn(() => Promise.resolve({
       json: () => Promise.resolve({
-        response: {
-          results: []
-        }
+        response: {}
       })
     }));
 
     return getArticles()
       .then(res => {
-        expect(res).toEqual([]);
+        expect(res).toEqual({});
       });
   });
 });
