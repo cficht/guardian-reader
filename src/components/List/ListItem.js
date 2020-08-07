@@ -2,9 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function ListItem({ article }) {
+  if(!article) return null;
+
   return (
     <li>
-      <h3>{article?.webTitle}</h3>
+      <a href={article.webUrl}><h3>{article.webTitle}</h3></a>
+      <img src={article.fields?.thumbnail} />
     </li>
   );
 }
