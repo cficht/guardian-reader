@@ -10,3 +10,4 @@
 ## Technologies
 
 * create-react-app
+* eslint
