@@ -15,11 +15,44 @@ exports[`renders List.js correctly 1`] = `
         <button>
           Search
         </button>
+        <label>
+          Per Page:
+          <select>
+            <option>
+              10
+            </option>
+            <option>
+              10
+            </option>
+            <option>
+              20
+            </option>
+            <option>
+              100
+            </option>
+          </select>
+        </label>
       </form>
     </section>
   </article>
   <article>
     <ul />
+  </article>
+  <article>
+    <section>
+      <button
+        disabled={true}
+        onClick={[Function]}
+      >
+        ←
+      </button>
+      <button
+        disabled={true}
+        onClick={[Function]}
+      >
+        →
+      </button>
+    </section>
   </article>
 </main>
 `;

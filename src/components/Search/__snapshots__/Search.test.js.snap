@@ -9,6 +9,23 @@ exports[`renders Search.js correctly 1`] = `
     <button>
       Search
     </button>
+    <label>
+      Per Page:
+      <select>
+        <option>
+          10
+        </option>
+        <option>
+          10
+        </option>
+        <option>
+          20
+        </option>
+        <option>
+          100
+        </option>
+      </select>
+    </label>
   </form>
 </section>
 `;
