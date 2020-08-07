@@ -4,6 +4,7 @@ exports[`renders App.js correctly 1`] = `
 <div
   className="App"
 >
+  <div />
   <main>
     <article>
       <section>
@@ -41,7 +42,9 @@ exports[`renders App.js correctly 1`] = `
       </section>
     </article>
     <article>
-      <ul />
+      <ul>
+        Loading
+      </ul>
     </article>
     <article>
       <section>

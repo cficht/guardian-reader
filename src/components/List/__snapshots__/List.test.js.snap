@@ -38,7 +38,9 @@ exports[`renders List.js correctly 1`] = `
     </section>
   </article>
   <article>
-    <ul />
+    <ul>
+      Loading
+    </ul>
   </article>
   <article>
     <section>

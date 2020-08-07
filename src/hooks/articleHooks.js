@@ -37,6 +37,7 @@ export const useArticles = () => {
       });
   };
 
+  // SEARCH
   const handleSearchText = ({ target }) => setSearchText(target.value);
 
   const handleSearch = (e) => {
@@ -46,6 +47,7 @@ export const useArticles = () => {
     fetchArticles(1);
   };
 
+  // PAGINATION
   const handlePage = (incDec) => {
     setIsLoading(true);
     setPage(page => setPage(page + incDec));
