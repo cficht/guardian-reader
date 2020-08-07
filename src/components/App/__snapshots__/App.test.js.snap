@@ -4,8 +4,8 @@ exports[`renders App.js correctly 1`] = `
 <div
   className="App"
 >
-  <div>
-    LIST
-  </div>
+  <main>
+    <ul />
+  </main>
 </div>
 `;
