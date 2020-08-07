@@ -6,9 +6,10 @@ export const useArticles = () => {
   const [searchText, setSearchText] = useState('');
   const [page, setPage] = useState(1);
   const [maxPage, setMaxPage] = useState(1);
+  const [perPage, setPerPage] = useState(10);
 
   useEffect(() => {
-    getArticles(searchText, page)
+    getArticles(page, perPage, searchText)
       .then(results => {
         setArticles(results.articles);
         setMaxPage(results.pages);
@@ -19,8 +20,9 @@ export const useArticles = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    getArticles(searchText, 1)
+    getArticles(1, perPage, searchText)
       .then(newResults => {
+        setPage(1);
         setArticles(newResults.articles);
         setMaxPage(newResults.pages);
       });
@@ -30,6 +32,8 @@ export const useArticles = () => {
     setPage(page => setPage(page + incDec));
   };
 
+  const handlePerPage = ({ target }) => setPerPage(Number(target.value));
+
   return {
     articles,
     searchText,
@@ -37,6 +41,7 @@ export const useArticles = () => {
     maxPage,
     handleSearchText,
     handleSearch,
-    handlePage
+    handlePage,
+    handlePerPage
   };
 };

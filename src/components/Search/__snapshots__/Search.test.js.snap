@@ -16,10 +16,10 @@ exports[`renders Search.js correctly 1`] = `
           10
         </option>
         <option>
-          10
+          20
         </option>
         <option>
-          20
+          50
         </option>
         <option>
           100

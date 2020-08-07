@@ -20,15 +20,17 @@ exports[`renders App.js correctly 1`] = `
           </button>
           <label>
             Per Page:
-            <select>
-              <option>
-                10
-              </option>
+            <select
+              onChange={[Function]}
+            >
               <option>
                 10
               </option>
               <option>
                 20
+              </option>
+              <option>
+                50
               </option>
               <option>
                 100
