@@ -5,7 +5,7 @@ import Search from '../Search/Search';
 import Pagination from '../Pagination/Pagination';
 
 export default function List() {
-  const { articles, searchText, page, maxPage, handleSearchText, handleSearch, handlePage, handlePerPage } = useArticles();
+  const { articles, searchText, page, maxPage, isLoading, getError, handleSearchText, handleSearch, handlePage, handlePerPage } = useArticles();
 
   const articleNodes = articles.map(article => <ListItem key={article.id} article={article}/>);
 
@@ -16,7 +16,8 @@ export default function List() {
       </article>
       <article>
         <ul>
-          {articleNodes}
+          { isLoading ? 'Loading' : articleNodes}
+          { getError ? getError : null}
         </ul>
       </article>
       <article>

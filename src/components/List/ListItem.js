@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 export default function ListItem({ article }) {
   if(!article) return null;
+  console.log(article.fields?.thumbnail);
 
   return (
     <li>
       <a href={article.webUrl}><h3>{article.webTitle}</h3></a>
-      <img src={article.fields?.thumbnail} alt="Article Thumbnail"/>
+      <img src={article.fields?.thumbnail ? article.fields?.thumbnail : './broken_image.png'} alt="Article Thumbnail"/>
     </li>
   );
 }

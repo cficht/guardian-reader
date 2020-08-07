@@ -7,29 +7,49 @@ export const useArticles = () => {
   const [page, setPage] = useState(1);
   const [maxPage, setMaxPage] = useState(1);
   const [perPage, setPerPage] = useState(10);
+  const [isLoading, setIsLoading] = useState(true);
+  const [getError, setGetError] = useState(null);
 
   useEffect(() => {
-    getArticles(page, perPage, searchText)
+    setIsLoading(true);
+    getArticles(1, 10, '')
       .then(results => {
         setArticles(results.articles);
         setMaxPage(results.pages);
+        setIsLoading(false);
+      })
+      .catch(() => {
+        setIsLoading(false);
+        setGetError('Cannot retrieve articles');
       });
-  }, [page]);
+  }, []);
+
+  const fetchArticles = (pageNum) => {
+    getArticles(pageNum, perPage, searchText)
+      .then(results => {
+        setArticles(results.articles);
+        setMaxPage(results.pages);
+        setIsLoading(false);
+      })
+      .catch(() => {
+        setIsLoading(false);
+        setGetError('Cannot retrieve articles');
+      });
+  };
 
   const handleSearchText = ({ target }) => setSearchText(target.value);
 
   const handleSearch = (e) => {
     e.preventDefault();
-    getArticles(1, perPage, searchText)
-      .then(newResults => {
-        setPage(1);
-        setArticles(newResults.articles);
-        setMaxPage(newResults.pages);
-      });
+    setIsLoading(true);
+    setPage(1);
+    fetchArticles(1);
   };
 
   const handlePage = (incDec) => {
+    setIsLoading(true);
     setPage(page => setPage(page + incDec));
+    fetchArticles(page + incDec);
   };
 
   const handlePerPage = ({ target }) => setPerPage(Number(target.value));
@@ -39,6 +59,8 @@ export const useArticles = () => {
     searchText,
     page,
     maxPage,
+    isLoading,
+    getError,
     handleSearchText,
     handleSearch,
     handlePage,
