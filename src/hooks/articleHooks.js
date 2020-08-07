@@ -8,12 +8,14 @@ export const useArticles = () => {
   useEffect(() => {
     getArticles()
       .then(articles => setArticles(articles));
-  }, []);
+  }, [searchText]);
 
   const handleSearchText = ({ target }) => setSearchText(target.value);
 
   const handleSearch = (e) => {
     e.preventDefault();
+    getArticles(searchText)
+      .then(newArticles => setArticles(newArticles));
   };
 
   return {

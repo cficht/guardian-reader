@@ -4,14 +4,14 @@ import ListItem from './ListItem';
 import Search from '../Search/Search';
 
 export default function List() {
-  const { articles } = useArticles();
+  const { articles, searchText, handleSearchText, handleSearch } = useArticles();
 
   const articleNodes = articles.map(article => <ListItem key={article.id} article={article}/>);
 
   return (
     <main>
       <article>
-        <Search />
+        <Search searchText={searchText} handleSearchText={handleSearchText} handleSearch={handleSearch}/>
       </article>
       <article>
         <ul>

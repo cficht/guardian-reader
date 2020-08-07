@@ -2,13 +2,9 @@
 
 exports[`renders Search.js correctly 1`] = `
 <section>
-  <form
-    onSubmit={[Function]}
-  >
+  <form>
     <input
-      onChange={[Function]}
       type="text"
-      value=""
     />
     <button>
       Search

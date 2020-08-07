@@ -1,8 +1,7 @@
 import React from 'react';
-import { useArticles } from '../../hooks/articleHooks';
+import PropTypes from 'prop-types';
 
-export default function Search() {
-  const { searchText, handleSearchText, handleSearch } = useArticles();
+export default function Search({ searchText, handleSearchText, handleSearch }) {
 
   return (
     <section>
@@ -13,3 +12,9 @@ export default function Search() {
     </section>
   );
 }
+
+Search.propTypes = {
+  searchText: PropTypes.string,
+  handleSearchText: PropTypes.func,
+  handleSearch: PropTypes.func
+};
