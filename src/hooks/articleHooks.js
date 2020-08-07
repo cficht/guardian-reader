@@ -12,7 +12,7 @@ export const useArticles = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    getArticles(page, perPage, searchText)
+    getArticles(1, 10, '')
       .then(results => {
         setArticles(results.articles);
         setMaxPage(results.pages);
@@ -22,18 +22,13 @@ export const useArticles = () => {
         setIsLoading(false);
         setGetError('Cannot retrieve articles');
       });
-  }, [page]);
+  }, []);
 
-  const handleSearchText = ({ target }) => setSearchText(target.value);
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    getArticles(1, perPage, searchText)
-      .then(newResults => {
-        setPage(1);
-        setArticles(newResults.articles);
-        setMaxPage(newResults.pages);
+  const fetchArticles = (pageNum) => {
+    getArticles(pageNum, perPage, searchText)
+      .then(results => {
+        setArticles(results.articles);
+        setMaxPage(results.pages);
         setIsLoading(false);
       })
       .catch(() => {
@@ -42,8 +37,19 @@ export const useArticles = () => {
       });
   };
 
+  const handleSearchText = ({ target }) => setSearchText(target.value);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setPage(1);
+    fetchArticles(1);
+  };
+
   const handlePage = (incDec) => {
+    setIsLoading(true);
     setPage(page => setPage(page + incDec));
+    fetchArticles(page + incDec);
   };
 
   const handlePerPage = ({ target }) => setPerPage(Number(target.value));
