@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Broken from '../../assets/broken_image.png';
 
 export default function ListItem({ article }) {
   if(!article) return null;
@@ -7,7 +8,7 @@ export default function ListItem({ article }) {
   return (
     <li>
       <a href={article.webUrl}><h3>{article.webTitle}</h3></a>
-      <img src={article.fields?.thumbnail ? article.fields?.thumbnail : './broken_image.png'} alt="Article Thumbnail"/>
+      <img src={article.fields?.thumbnail ? article.fields?.thumbnail : Broken} alt="Article Thumbnail"/>
     </li>
   );
 }

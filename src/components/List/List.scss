@@ -1,5 +1,14 @@
 $primary-color: #052962;
-$primary-font-color: #FFFFFF;
+$secondary-color: #FFFFFF;
+$third-color: whitesmoke;
+$fourth-color: #00417B;
+$fifth-color: #B2C9D9;
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary-color;
+}
 
 .search-container {
   display: flex;
@@ -8,14 +17,16 @@ $primary-font-color: #FFFFFF;
 }
 
 .list-container {
+  display: flex;
+  justify-content: center;
   
-
   ul {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     list-style-type: none;
     padding-inline-start: 0px;
+    padding: 20px;
 
     li {
       display: flex;
@@ -26,6 +37,10 @@ $primary-font-color: #FFFFFF;
       margin: 10px;
       padding: 10px;
       text-align: center;
+      overflow: hidden;
+      border: 1px solid black;
+      border-radius: 20px;
+      background-color: $third-color;
 
       h3 {
         margin-block-start: 0em;
@@ -33,6 +48,13 @@ $primary-font-color: #FFFFFF;
 
       img {
         width: 100%;
+        border: 1px solid black;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      li {
+        width: 40%;
       }
     }
   }
