@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Pagination.js correctly 1`] = `
-<section>
+<section
+  className="pagination-section"
+>
   <button
     disabled={false}
     onClick={[Function]}

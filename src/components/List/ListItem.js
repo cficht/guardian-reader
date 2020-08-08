@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 export default function ListItem({ article }) {
   if(!article) return null;
-  console.log(article.fields?.thumbnail);
 
   return (
     <li>

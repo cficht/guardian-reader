@@ -1,8 +1,9 @@
 import React from 'react';
-import { useArticles } from '../../hooks/articleHooks';
 import ListItem from './ListItem';
 import Search from '../Search/Search';
 import Pagination from '../Pagination/Pagination';
+import { useArticles } from '../../hooks/articleHooks';
+import './List.scss';
 
 export default function List() {
   const { articles, searchText, page, maxPage, isLoading, getError, handleSearchText, handleSearch, handlePage, handlePerPage } = useArticles();
@@ -11,18 +12,20 @@ export default function List() {
 
   return (
     <main>
-      <article>
+      <article className="search-container">
         <Search searchText={searchText} handleSearchText={handleSearchText} handleSearch={handleSearch} handlePerPage={handlePerPage}/>
       </article>
-      <article>
+      <article className="list-container">
         <ul>
-          { isLoading ? 'Loading' : articleNodes}
+          { isLoading ? 'Loading...' : articleNodes}
           { getError ? getError : null}
         </ul>
       </article>
-      <article>
-        <Pagination page={page} maxPage={maxPage} handlePage={handlePage}/>
-      </article>
+      { isLoading || getError ? null : 
+        <article className="pagination-container">
+          <Pagination page={page} maxPage={maxPage} handlePage={handlePage}/>
+        </article>
+      }
     </main>
   );
 }

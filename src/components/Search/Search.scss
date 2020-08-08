@@ -1,0 +1,45 @@
+$primary-color: #052962;
+$primary-font-color: #FFFFFF;
+
+.search-section {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 20px;
+  background-color: whitesmoke;
+
+  form {
+    width: 100%;
+  }
+}
+
+.search-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 5px 0px 0px 0px;
+
+  input {
+    width: 20%;
+    margin: 5px 10px 5px 10px;
+  }
+
+  button {
+    width: 20%;
+    margin: 5px 10px 5px 10px;
+    padding: 5px;
+    color: $primary-font-color;
+    background-color: $primary-color;
+  }
+}
+
+.per-page-div {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0px 0px 5px 0px;
+
+  select {
+    margin: 5px 10px 5px 10px;
+  }
+}

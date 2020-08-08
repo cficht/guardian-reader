@@ -11,3 +11,4 @@
 
 * create-react-app
 * eslint
+* node-sass

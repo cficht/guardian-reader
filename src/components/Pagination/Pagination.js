@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Pagination.scss';
 
 export default function Pagination({ page, maxPage, handlePage }) {
   return (
-    <section>
+    <section className="pagination-section">
       <button onClick={() => handlePage(-1)} disabled={page <= 1}>&larr;</button>
       <button onClick={() => handlePage(1)} disabled={page >= maxPage}>&rarr;</button>
     </section>
