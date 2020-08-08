@@ -6,14 +6,14 @@ import { useArticles } from '../../hooks/articleHooks';
 import './List.scss';
 
 export default function List() {
-  const { articles, searchText, page, maxPage, isLoading, getError, handleSearchText, handleSearch, handlePage, handlePerPage } = useArticles();
+  const { articles, searchText, page, maxPage, isLoading, getError, handleSearchText, handleSearch, handlePage } = useArticles();
 
   const articleNodes = articles.map(article => <ListItem key={article.id} article={article}/>);
 
   return (
     <main>
       <article className="search-container">
-        <Search searchText={searchText} handleSearchText={handleSearchText} handleSearch={handleSearch} handlePerPage={handlePerPage}/>
+        <Search searchText={searchText} handleSearchText={handleSearchText} handleSearch={handleSearch}/>
       </article>
       <article className="list-container">
         <ul>

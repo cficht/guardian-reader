@@ -6,13 +6,12 @@ export const useArticles = () => {
   const [searchText, setSearchText] = useState('');
   const [page, setPage] = useState(1);
   const [maxPage, setMaxPage] = useState(1);
-  const [perPage, setPerPage] = useState(10);
   const [isLoading, setIsLoading] = useState(true);
   const [getError, setGetError] = useState(null);
 
   useEffect(() => {
     setIsLoading(true);
-    getArticles(1, 10, '')
+    getArticles(1, '')
       .then(results => {
         setArticles(results.articles);
         setMaxPage(results.pages);
@@ -25,7 +24,7 @@ export const useArticles = () => {
   }, []);
 
   const fetchArticles = (pageNum) => {
-    getArticles(pageNum, perPage, searchText)
+    getArticles(pageNum, searchText)
       .then(results => {
         setArticles(results.articles);
         setMaxPage(results.pages);
@@ -54,8 +53,6 @@ export const useArticles = () => {
     fetchArticles(page + incDec);
   };
 
-  const handlePerPage = ({ target }) => setPerPage(Number(target.value));
-
   return {
     articles,
     searchText,
@@ -65,7 +62,6 @@ export const useArticles = () => {
     getError,
     handleSearchText,
     handleSearch,
-    handlePage,
-    handlePerPage
+    handlePage
   };
 };
