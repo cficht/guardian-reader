@@ -4,7 +4,6 @@ import Broken from '../../assets/broken_image.png';
 
 export default function ListItem({ article }) {
   if(!article) return null;
-
   return (
     <li>
       <a href={article.webUrl}><h3>{article.webTitle}</h3></a>

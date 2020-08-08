@@ -7,7 +7,6 @@ import './List.scss';
 
 export default function List() {
   const { articles, searchObject, searchText, maxPage, isLoading, getError, handleSearchText, handleSearchSubmit, handlePage } = useArticles();
-
   const articleNodes = articles.map(article => <ListItem key={article.id} article={article}/>);
 
   const pageConditions = () => {

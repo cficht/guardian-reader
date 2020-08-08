@@ -1,9 +1,9 @@
 import React from 'react';
 import List from '../List/List';
-import './App.scss';
 import Header from '../Header/Header';
+import './App.scss';
 
-function App() {
+export default function App() {
   return (
     <div className="app-container">
       <Header />
@@ -11,5 +11,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
