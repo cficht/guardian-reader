@@ -2,7 +2,7 @@
 
 exports[`renders App.js correctly 1`] = `
 <div
-  className="App"
+  className="app-container"
 >
   <header>
     <h1>
@@ -61,7 +61,7 @@ exports[`renders App.js correctly 1`] = `
       className="list-container"
     >
       <ul>
-        Loading
+        Loading...
       </ul>
     </article>
   </main>

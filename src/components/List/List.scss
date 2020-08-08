@@ -1,19 +1,27 @@
 $primary-color: #052962;
 $primary-font-color: #FFFFFF;
 
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
 .search-container {
   display: flex;
   justify-content: center;
+  flex: 0 1 auto;
   background-color: $primary-color;
 }
 
 .list-container {
-  
+  flex: 1 1 auto;
 
   ul {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     list-style-type: none;
     padding-inline-start: 0px;
 
@@ -41,5 +49,6 @@ $primary-font-color: #FFFFFF;
 .pagination-container {
   display: flex;
   justify-content: center;
+  flex: 0 1 10%;
   background-color: $primary-color;
 }

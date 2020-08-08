@@ -53,7 +53,7 @@ exports[`renders List.js correctly 1`] = `
     className="list-container"
   >
     <ul>
-      Loading
+      Loading...
     </ul>
   </article>
 </main>
