@@ -1,0 +1,40 @@
+.search-container {
+  display: flex;
+  justify-content: center;
+  background-color: darkblue;
+}
+
+.list-container {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding-inline-start: 0px;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 20%;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+
+      h3 {
+        margin-block-start: 0em;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  background-color: darkblue;
+}

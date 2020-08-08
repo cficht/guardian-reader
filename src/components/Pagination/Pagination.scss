@@ -1,0 +1,12 @@
+.pagination-section {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 20px;
+  padding: 20px;
+  background-color: whitesmoke;
+
+  button {
+    width: 20%;
+  }
+}

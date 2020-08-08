@@ -3,9 +3,9 @@ import React from 'react';
 export default function Header() {
   return (
     <header>
-      <div>
+      <section>
         <h1>Guardian Reader</h1>
-      </div>
+      </section>
     </header>
   );
 }
