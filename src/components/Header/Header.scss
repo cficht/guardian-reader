@@ -1,5 +1,8 @@
 $primary-color: #052962;
-$primary-font-color: #FFFFFF;
+$secondary-color: #FFFFFF;
+$third-color: whitesmoke;
+$fourth-color: #00417B;
+$fifth-color: #B2C9D9;
 
 header {
   display: flex;
@@ -8,6 +11,7 @@ header {
 
   img {
     width: 50%;
-    padding: 20px;
+    height: 100%;
+    padding: 20px 0px 0px 0px;
   }
 }

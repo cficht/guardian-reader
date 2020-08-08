@@ -1,19 +1,29 @@
 $primary-color: #052962;
-$primary-font-color: #FFFFFF;
+$secondary-color: #FFFFFF;
+$third-color: whitesmoke;
+$fourth-color: #00417B;
+$fifth-color: #B2C9D9;
 
 .pagination-section {
   display: flex;
   justify-content: center;
-  width: 50%;
+  align-items: center;
+  min-width: 50%;
   margin: 20px;
-  
-  background-color: whitesmoke;
+  background-color: $third-color;
 
   button {
-    width: 20%;
     margin: 20px;
-    padding: 5px;
-    color: $primary-font-color;
+    padding: 5px 20px 5px 20px;
+    color: $secondary-color;
     background-color: $primary-color;
+  }
+
+  button:hover {
+    background-color: $fourth-color;
+  }
+
+  button:disabled {
+    background-color: $fifth-color;
   }
 }

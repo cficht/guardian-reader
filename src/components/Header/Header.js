@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header>
       {/* <h1>Guardian Reader</h1> */}
-      <img src={Logo} />
+      <img src={Logo} alt="Guardian Logo"/>
     </header>
   );
 }

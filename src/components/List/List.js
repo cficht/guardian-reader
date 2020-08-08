@@ -17,7 +17,7 @@ export default function List() {
       </article>
       <article className="list-container">
         <ul>
-          { isLoading ? 'Loading...' : articleNodes}
+          { isLoading ? <h3>Loading...</h3> : articleNodes}
           { getError ? getError : null}
         </ul>
       </article>

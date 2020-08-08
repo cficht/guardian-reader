@@ -1,29 +1,32 @@
 $primary-color: #052962;
-$primary-font-color: #FFFFFF;
+$secondary-color: #FFFFFF;
+$third-color: whitesmoke;
+$fourth-color: #00417B;
+$fifth-color: #B2C9D9;
 
 main {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  background-color: whitesmoke;
+  background-color: $secondary-color;
 }
 
 .search-container {
   display: flex;
   justify-content: center;
-  flex: 0 1 auto;
   background-color: $primary-color;
 }
 
 .list-container {
-  flex: 1 1 auto;
-
+  display: flex;
+  justify-content: center;
+  
   ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     list-style-type: none;
     padding-inline-start: 0px;
+    padding: 20px;
 
     li {
       display: flex;
@@ -34,6 +37,10 @@ main {
       margin: 10px;
       padding: 10px;
       text-align: center;
+      overflow: hidden;
+      border: 1px solid black;
+      border-radius: 20px;
+      background-color: $third-color;
 
       h3 {
         margin-block-start: 0em;
@@ -41,6 +48,13 @@ main {
 
       img {
         width: 100%;
+        border: 1px solid black;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      li {
+        width: 40%;
       }
     }
   }
@@ -49,6 +63,5 @@ main {
 .pagination-container {
   display: flex;
   justify-content: center;
-  flex: 0 1 10%;
   background-color: $primary-color;
 }
