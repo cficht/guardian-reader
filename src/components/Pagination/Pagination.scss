@@ -1,12 +1,19 @@
+$primary-color: #052962;
+$primary-font-color: #FFFFFF;
+
 .pagination-section {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 50%;
   margin: 20px;
-  padding: 20px;
+  
   background-color: whitesmoke;
 
   button {
     width: 20%;
+    margin: 20px;
+    padding: 5px;
+    color: $primary-font-color;
+    background-color: $primary-color;
   }
 }

@@ -4,63 +4,65 @@ exports[`renders App.js correctly 1`] = `
 <div
   className="App"
 >
-  <div />
+  <header>
+    <h1>
+      Guardian Reader
+    </h1>
+  </header>
   <main>
-    <article>
-      <section>
+    <article
+      className="search-container"
+    >
+      <section
+        className="search-section"
+      >
         <form
           onSubmit={[Function]}
         >
-          <input
-            onChange={[Function]}
-            type="text"
-            value=""
-          />
-          <button>
-            Search
-          </button>
-          <label>
-            Per Page:
-            <select
+          <div
+            className="search-div"
+          >
+            <input
               onChange={[Function]}
-            >
-              <option>
-                10
-              </option>
-              <option>
-                20
-              </option>
-              <option>
-                50
-              </option>
-              <option>
-                100
-              </option>
-            </select>
-          </label>
+              type="text"
+              value=""
+            />
+            <button>
+              Search
+            </button>
+          </div>
+          <div
+            className="per-page-div"
+          >
+            <label>
+              Articles Per Page:
+              <select
+                onChange={[Function]}
+              >
+                <option>
+                  10
+                </option>
+                <option>
+                  20
+                </option>
+                <option>
+                  50
+                </option>
+                <option>
+                  100
+                </option>
+              </select>
+            </label>
+          </div>
         </form>
       </section>
     </article>
-    <article>
+    <article
+      className="list-container"
+    >
       <ul>
         Loading
       </ul>
-    </article>
-    <article>
-      <section>
-        <button
-          disabled={true}
-          onClick={[Function]}
-        >
-          ←
-        </button>
-        <button
-          disabled={true}
-          onClick={[Function]}
-        >
-          →
-        </button>
-      </section>
     </article>
   </main>
 </div>

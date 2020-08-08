@@ -11,8 +11,7 @@ export default function Search({ searchText, handleSearchText, handleSearch, han
           <button>Search</button>
         </div>
         <div className="per-page-div">
-          <label>
-          Per Page:
+          <label>Articles Per Page:
             <select onChange={handlePerPage}>
               <option>10</option>
               <option>20</option>

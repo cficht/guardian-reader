@@ -1,0 +1,15 @@
+$primary-color: #052962;
+$primary-font-color: #FFFFFF;
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: $primary-color;
+
+  h1 {
+    font-size: 3em;
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
+    color: $primary-font-color;
+  }
+}

@@ -17,13 +17,15 @@ export default function List() {
       </article>
       <article className="list-container">
         <ul>
-          { isLoading ? 'Loading' : articleNodes}
+          { isLoading ? 'Loading...' : articleNodes}
           { getError ? getError : null}
         </ul>
       </article>
-      <article className="pagination-container">
-        <Pagination page={page} maxPage={maxPage} handlePage={handlePage}/>
-      </article>
+      { isLoading || getError ? null : 
+        <article className="pagination-container">
+          <Pagination page={page} maxPage={maxPage} handlePage={handlePage}/>
+        </article>
+      }
     </main>
   );
 }

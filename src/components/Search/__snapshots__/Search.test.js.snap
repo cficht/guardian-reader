@@ -1,31 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Search.js correctly 1`] = `
-<section>
+<section
+  className="search-section"
+>
   <form>
-    <input
-      type="text"
-    />
-    <button>
-      Search
-    </button>
-    <label>
-      Per Page:
-      <select>
-        <option>
-          10
-        </option>
-        <option>
-          20
-        </option>
-        <option>
-          50
-        </option>
-        <option>
-          100
-        </option>
-      </select>
-    </label>
+    <div
+      className="search-div"
+    >
+      <input
+        type="text"
+      />
+      <button>
+        Search
+      </button>
+    </div>
+    <div
+      className="per-page-div"
+    >
+      <label>
+        Articles Per Page:
+        <select>
+          <option>
+            10
+          </option>
+          <option>
+            20
+          </option>
+          <option>
+            50
+          </option>
+          <option>
+            100
+          </option>
+        </select>
+      </label>
+    </div>
   </form>
 </section>
 `;
