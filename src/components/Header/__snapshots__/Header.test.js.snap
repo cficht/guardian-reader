@@ -2,8 +2,9 @@
 
 exports[`renders Header.js correctly 1`] = `
 <header>
-  <h1>
-    Guardian Reader
-  </h1>
+  <img
+    alt="Guardian Logo"
+    src="guardian_logo.png"
+  />
 </header>
 `;

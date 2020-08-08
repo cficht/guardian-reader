@@ -11,50 +11,23 @@ exports[`renders List.js correctly 1`] = `
       <form
         onSubmit={[Function]}
       >
-        <div
-          className="search-div"
-        >
-          <input
-            onChange={[Function]}
-            type="text"
-            value=""
-          />
-          <button>
-            Search
-          </button>
-        </div>
-        <div
-          className="per-page-div"
-        >
-          <label>
-            Articles Per Page:
-            <select
-              onChange={[Function]}
-            >
-              <option>
-                10
-              </option>
-              <option>
-                20
-              </option>
-              <option>
-                50
-              </option>
-              <option>
-                100
-              </option>
-            </select>
-          </label>
-        </div>
+        <input
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+        <button>
+          Search
+        </button>
       </form>
     </section>
   </article>
   <article
     className="list-container"
   >
-    <ul>
+    <h3>
       Loading...
-    </ul>
+    </h3>
   </article>
 </main>
 `;

@@ -10,6 +10,9 @@ exports[`renders Pagination.js correctly 1`] = `
   >
     ←
   </button>
+  <h3>
+     / 
+  </h3>
   <button
     disabled={false}
     onClick={[Function]}
