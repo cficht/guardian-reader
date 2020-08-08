@@ -9,7 +9,7 @@ describe('getArticles service', () => {
       })
     }));
 
-    return getArticles()
+    return getArticles({ query: '', page: 1 })
       .then(res => {
         expect(res).toEqual({});
       });

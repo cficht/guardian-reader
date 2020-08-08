@@ -3,15 +3,15 @@ import { getArticles } from '../services/guardian-api';
 
 export const useArticles = () => {
   const [articles, setArticles] = useState([]);
+  const [searchObject, setSearchObject] = useState({ query: '', page: 1 });
   const [searchText, setSearchText] = useState('');
-  const [page, setPage] = useState(1);
   const [maxPage, setMaxPage] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
   const [getError, setGetError] = useState(null);
 
   useEffect(() => {
     setIsLoading(true);
-    getArticles(1, '')
+    getArticles(searchObject)
       .then(results => {
         setArticles(results.articles);
         setMaxPage(results.pages);
@@ -19,49 +19,29 @@ export const useArticles = () => {
       })
       .catch(() => {
         setIsLoading(false);
-        setGetError('Cannot retrieve articles');
+        setGetError('Cannot retrieve articles...');
       });
-  }, []);
-
-  const fetchArticles = (pageNum) => {
-    getArticles(pageNum, searchText)
-      .then(results => {
-        setArticles(results.articles);
-        setMaxPage(results.pages);
-        setIsLoading(false);
-      })
-      .catch(() => {
-        setIsLoading(false);
-        setGetError('Cannot retrieve articles');
-      });
-  };
+  }, [searchObject]);
 
   // SEARCH
   const handleSearchText = ({ target }) => setSearchText(target.value);
-
-  const handleSearch = (e) => {
+  const handleSearchSubmit = (e) => {
     e.preventDefault();
-    setIsLoading(true);
-    setPage(1);
-    fetchArticles(1);
+    setSearchObject({ query: searchText, page: 1 });
   };
 
   // PAGINATION
-  const handlePage = (incDec) => {
-    setIsLoading(true);
-    setPage(page => setPage(page + incDec));
-    fetchArticles(page + incDec);
-  };
+  const handlePage = (incDec) => setSearchObject({ ...searchObject, page: searchObject.page + incDec });
 
   return {
     articles,
+    searchObject,
     searchText,
-    page,
     maxPage,
     isLoading,
     getError,
     handleSearchText,
-    handleSearch,
+    handleSearchSubmit,
     handlePage
   };
 };

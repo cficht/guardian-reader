@@ -6,6 +6,7 @@ export default function Pagination({ page, maxPage, handlePage }) {
   return (
     <section className="pagination-section">
       <button onClick={() => handlePage(-1)} disabled={page <= 1}>&larr;</button>
+      <h3>{page} / {maxPage}</h3>
       <button onClick={() => handlePage(1)} disabled={page >= maxPage}>&rarr;</button>
     </section>
   );
