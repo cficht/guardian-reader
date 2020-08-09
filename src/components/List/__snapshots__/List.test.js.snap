@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders List.js correctly 1`] = `
+<main>
+  <article
+    className="search-container"
+  >
+    <section
+      className="search-section"
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+        <button>
+          Search
+        </button>
+      </form>
+    </section>
+  </article>
+  <article
+    className="list-container"
+  >
+    <h3>
+      Loading...
+    </h3>
+  </article>
+</main>
+`;

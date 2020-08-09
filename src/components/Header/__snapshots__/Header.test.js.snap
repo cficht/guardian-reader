@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Header.js correctly 1`] = `
+<header>
+  <img
+    alt="Guardian Logo"
+    src="guardian_logo.png"
+  />
+</header>
+`;

@@ -1,0 +1,17 @@
+$primary-color: #052962;
+$secondary-color: #FFFFFF;
+$third-color: whitesmoke;
+$fourth-color: #00417B;
+$fifth-color: #B2C9D9;
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: $primary-color;
+
+  img {
+    height: 100%;
+    width: 50%;
+    padding: 20px 0px 0px 0px;
+  }
+}

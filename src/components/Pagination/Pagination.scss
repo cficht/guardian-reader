@@ -1,0 +1,31 @@
+$primary-color: #052962;
+$secondary-color: #FFFFFF;
+$third-color: whitesmoke;
+$fourth-color: #00417B;
+$fifth-color: #B2C9D9;
+
+.pagination-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50%;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: $third-color;
+
+  button {
+    margin: 20px;
+    padding: 5px 20px 5px 20px;
+    color: $secondary-color;
+    background-color: $primary-color;
+  }
+
+  button:hover {
+    background-color: $fourth-color;
+  }
+
+  button:disabled {
+    background-color: $fifth-color;
+  }
+}

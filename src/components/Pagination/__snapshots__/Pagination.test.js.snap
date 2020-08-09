@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Pagination.js correctly 1`] = `
+<section
+  className="pagination-section"
+>
+  <button
+    disabled={false}
+    onClick={[Function]}
+  >
+    ←
+  </button>
+  <h3>
+     / 
+  </h3>
+  <button
+    disabled={false}
+    onClick={[Function]}
+  >
+    →
+  </button>
+</section>
+`;

@@ -1,0 +1,36 @@
+$primary-color: #052962;
+$secondary-color: #FFFFFF;
+$third-color: whitesmoke;
+$fourth-color: #00417B;
+$fifth-color: #B2C9D9;
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  min-width: 50%;
+  margin: 20px;
+  padding: 5px 0px 5px 0px;
+  background-color: $third-color;
+
+  form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  input {
+    margin: 5px 10px 5px 10px;
+  }
+
+  button {
+    margin: 5px 10px 5px 10px;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    color: $secondary-color;
+    background-color: $primary-color;
+  }
+
+  button:hover {
+    background-color: $fourth-color;
+  }
+}

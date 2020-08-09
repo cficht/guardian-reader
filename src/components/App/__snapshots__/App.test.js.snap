@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders App.js correctly 1`] = `
+<div
+  className="app-container"
+>
+  <header>
+    <img
+      alt="Guardian Logo"
+      src="guardian_logo.png"
+    />
+  </header>
+  <main>
+    <article
+      className="search-container"
+    >
+      <section
+        className="search-section"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <input
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <button>
+            Search
+          </button>
+        </form>
+      </section>
+    </article>
+    <article
+      className="list-container"
+    >
+      <h3>
+        Loading...
+      </h3>
+    </article>
+  </main>
+</div>
+`;
